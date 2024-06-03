@@ -1,0 +1,350 @@
+
+.header{
+  color: #4e5358;
+  font-size: 0.93vw;
+  background-color: var(--main-bg-color);
+  transition: background-color 0.5s;
+  margin: 0vw 0vw 1.33vw;
+  padding: 0.53vw 1.33vw;
+  height: 4.5vw;
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+}
+
+.nav{
+ margin-right: 6.66vw;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  margin: 0 1.33vw;
+}
+
+/* brand */
+.brand{
+  margin: 0vw 0vw 0vw -1vw;
+  padding: 0.66vw 1.33vw;
+  height: 3.33vw;
+  line-height: 1.33vw;
+  font-size: 1.2vw;
+  margin-left: 0.66vw;
+}
+
+.brand .logo img{
+  height: 2.4vw;
+  padding:0vw 2vw;
+}
+
+
+/* menu */
+.collapse{
+  padding:0.66vw 1vw;
+  flex: 1;
+}
+
+.collapse .navbar-nav{
+  display: flex;
+  margin-left: 0.33vw;
+}
+
+.collapse .navbar-nav li{
+  margin-right: 0.33vw;
+}
+
+.collapse .navbar-nav>li>a{
+  padding: 1.66vw 0.33vw;
+  color: #4E5358;
+  font:1vw "\5B8B\4F53",Arial, Helvetica, sans-serif;
+  line-height: 3.33vw;
+  max-height: 3.33vw;
+  position: relative;
+}
+
+.collapse .a-night{
+  color: #e5eef7 !important;
+}
+
+
+.collapse .navbar-nav > li.active > a {
+  position: relative;
+  color: #e06711;
+}
+
+.collapse .navbar-nav > li.active > .a-night-active {
+  color: #e06711 !important;
+}
+
+.collapse .navbar-nav > li.active > a:before {
+  content: '';
+  position: absolute;
+  top: -0.26vw; /* 调整这个值来设置弧线的位置 */
+  left: 0;
+  right: 0;
+  height: 0.26vw; /* 调整这个值来设置弧线的粗细 */
+  background-color: #e06711;
+  border-radius: 0 0 0.66vw 0.66vw; /* 调整这个值来设置弧度的大小 */
+  animation: trailEffect 0.3s linear forwards; /* 添加动画效果，并保持最后状态 */
+}
+
+@keyframes trailEffect {
+  0% {
+    transform: translateX(-1.33vw);
+    box-shadow: none;
+  }
+  100% {
+    transform: translateX(0);
+    box-shadow: 0 0 25px rgba(224, 103, 17, 0.1);
+  }
+}
+
+
+
+/* right */
+.right{
+  position: relative;
+  display: flex;
+  margin: 0.53vw 4vw;
+  height: 2.4vw;
+  padding: 0px 0.33vw 1.33vw 1vw;
+}
+
+.right ul{
+  display: flex;
+}
+
+.right ul li{
+  width: 3.2vw;
+  padding-right: 0.33vw;
+  padding-left: 0.33vw;
+}
+
+.right ul .btn{
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: 0.066vw solid transparent;
+  padding: 0.4vw 0.8vw;
+  font-size: 0.933vw;
+  line-height: 1.4285;
+  border-radius: 0.266vw;
+}
+
+.right ul img{
+  padding: 0.4vw 0.8vw;
+  width: 100%;
+  transition: all .3s;
+}
+
+
+.right ul .img-enter{
+  transform: rotate(720deg);
+  transition: all .3s;
+}
+
+
+.right ul svg{
+  padding: 0.4vw 0.066vw;
+  width: 100%;
+}
+
+.right .divider {
+  align-items: center;
+  border-left: 1px solid rgb(227, 220, 220); /* 设置竖线颜色 */
+  height: 1.33vw; /* 设置竖线高度，与右侧部分的高度一致 */
+  line-height: 1.33vw;
+  align-self: center; /* 竖线垂直居中 */
+  margin: 0.66vw 0 0 1vw; /* 设置竖线左右间距 */
+}
+
+.right .search-day {
+  fill:#e3eef7; /* 修改为正确的颜色值 */
+}
+
+.right .search-night {
+  fill:#3C405D; /* 修改为正确的颜色值，并去掉双引号 */
+}
+
+
+/* night-day */
+.right .day-night{
+  width: 2.66vw;
+  height: 2vw;
+}
+
+.right .night{
+  visibility:visible;
+  position: absolute;
+  width: 2.66vw;
+  height: 2.33vw;
+  right: 0.66vw;
+  bottom: 0.66vw;
+  transition: all .3s;
+}
+
+.right .night-click{
+  visibility: hidden;
+}
+
+.right .day{
+  visibility: visible;
+  position: absolute;
+  right: 1.33vw;
+  bottom: 0.66vw;
+  width: 1.53vw;
+  height: 2.33vw;
+  transition: all .3s;
+}
+
+.right .day-click{
+  visibility: hidden;
+}
+
+.right .svg-white-night{
+  fill: #fff;
+}
+
+/* avatar-hover */
+.sub-menu, .visible {
+  background-color: var(--main-bg-color);
+  transition: background-color 0.5s, transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* 添加背景颜色过渡 */
+  box-shadow: 0 0 0.66vw rgba(0,0,0,.1);
+}
+
+.sub-menu{
+  visibility: hidden;
+  position: absolute;
+  min-width: 8vw;
+  padding: 0.66vw 0.33vw;
+  left: -5.33vw;
+  bottom: -3.33vw;
+  box-shadow: 0 0 0.66vw rgba(0,0,0,.1);
+  opacity: 0;
+  transform: translateY(2.66vw);
+  transition: all 0.3s ease-in-out;
+}
+
+.visible{
+  border-radius: 0.33vw;
+  visibility: visible;
+  position: absolute;
+  min-width: 8vw;
+  padding: 0.66vw 0.33vw;
+  left: -5.33vw;
+  bottom: -5.33vw;
+  box-shadow: 0 0 0.66vw rgba(0,0,0,.1);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.padding-10{
+  padding: 0.66vw;
+}
+
+.sub-user-box{
+  width: 16.13vw;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* jsa */
+
+
+.jsa{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.jsa a{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.jsa .jsa-svg{
+  padding: 0 0.66vw;
+}
+
+.jsa svg{
+  width: 2.33vw;
+  height: 1.66vw;
+}
+
+.jsa .jsa-font{
+  margin-left: 0.2vw;
+  font:0.86vw "\5B8B\4F53",Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.53vw;
+  margin-top: -0.53vw;
+}
+
+/* 原有样式 */
+
+.jsa .jsa-font-login {
+  color: #4B8EE6;
+  transition: color 0.3s ease;
+}
+
+.jsa .jsa-font-register {
+  color: #D4237A;
+  transition: color 0.3s ease;
+}
+
+.jsa .jsa-font-findPassword {
+  color: #6CCA72;
+  transition: color 0.3s ease;
+}
+
+/* 新增悬停时字体颜色变浅的样式 */
+.jsa .signin-loader:hover .jsa-font-login {
+  color: #a3c6f2;
+}
+
+.jsa .signup-loader:hover .jsa-font-register {
+  color: #f29bba;
+}
+
+.jsa .find-loader:hover .jsa-font-findPassword {
+  color: #b8e4c5;
+}
+
+/* 原有 SVG 样式 */
+
+.jsa .icon-login{
+  fill:#4B8EE6;
+  transition: fill 0.3s ease;
+}
+
+.jsa .icon-register{
+  fill: #D4237A;
+  transition: fill 0.3s ease;
+}
+
+.jsa .icon-find{
+  fill: #6CCA72;
+  transition: fill 0.3s ease;
+}
+
+/* 新增悬停时 SVG 颜色变浅的样式 */
+.jsa .signin-loader:hover .icon-login{
+  fill: #a3c6f2;
+}
+
+.jsa .signup-loader:hover .icon-register{
+  fill: #f29bba;
+}
+
+.jsa .find-loader:hover .icon-find{
+  fill: #b8e4c5;
+}
+

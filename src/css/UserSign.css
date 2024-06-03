@@ -1,0 +1,478 @@
+/* sign主题 */
+.sign{
+  z-index: 10000;
+  position: fixed;
+  width: 53.334vw;
+  left: 23%;
+  top: 15%;
+  color: var(--main-font-color); 
+}
+
+.sign .sign-container{
+  padding: 1.334vw 0;
+  height: 26.667vw;
+}
+
+.sign-container .sign-box{
+  position: absolute;
+  max-width: 22vw;
+  width: 26.667vw;
+  height: 26.667vw;
+  margin: auto;
+  padding: 0.667vw;
+  margin: 0vw 15.667vw;
+  
+}
+
+/* 关闭 */
+.sign-box .close{
+  position: absolute;
+  top: 1.667vw;
+  right: 0.334vw;
+  font-size: 1.334vw;
+  cursor: pointer;
+}
+
+.sign-box .close .svg-close-leave{
+  width: 1.334vw;
+  height: 1.334vw;
+  transition: all .5s;
+}
+
+
+.sign-box .close .svg-close-enter{
+  width: 1.334vw;
+  height: 1.334vw;
+  transform: rotate(360deg);
+  transition: all .5s;
+}
+
+
+
+/* 登录 */
+.sign-box .tab-content .tab-sign-in{
+  width: 22vw;
+  height: 22.2vw;
+  background-color: var(--main-bg-color);
+  border-radius: 0.5334vw;
+  padding: 0.667vw;
+}
+
+/* 头 */
+.sign-heading{
+  width: 18vw;
+  height: 4.5334vw;
+  padding: 1vw;
+}
+
+.sign-heading .title{
+  width: 18vw;
+  height: 3.2vw;
+  margin-bottom: 0.5334vw;
+  font:1.8667vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sign-heading .title span{
+  color: var(--main-font-color);
+  float: left;
+}
+
+.sign-heading .title{
+  position: relative;
+  color: #e06711;
+  float: left;
+  margin-left: 0.2667vw;
+  margin-bottom: 0.5334vw;
+  transition: all .3s;
+}
+
+.sign-heading .title:before{
+  content: '';
+  position: absolute;
+  background-color: #e06711;
+  left: 0vw;
+  bottom: 0vw;
+  height: 0.2vw;
+  width: 2vw;
+  transform: scaleX(1);  /* 初始状态 */
+  transform-origin: center;  /* 以中心为基点 */
+  border-radius: 0.66vw 0.66vw 0.66vw 0.66vw;
+  transition: all 0.5s ;
+}
+
+.sign-heading .jump-leave{
+  float: left;
+  height: 0.8667vw;
+  color: var(--book-body-content);
+  font:0.8vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+.sign-heading .jump-enter{
+  float: left;
+  height: 0.8667vw;
+  color: #e06711;
+  font:0.8667vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+.sign-heading .jump-leave svg{
+  width: 0.667vw;
+  height: 0.667vw;
+  transition: all .3s;
+}
+
+.sign-heading .jump-enter svg{
+  fill: #e06711;
+  width: 0.667vw;
+  height: 0.667vw;
+  transition: all .3s;
+}
+
+/* form */
+form{
+  width: 18.667vw;
+  height: 12.0667vw;
+}
+
+form .line-form{
+  position: relative;
+  width: 18.667vw;
+  height: 1.6vw;
+  margin: 1.58667vw 0vw 0vw;
+  padding: 0vw 1.8667vw 0.28vw 0.28vw;
+}
+
+form .line-form .line-form-input-leave{
+  padding: 0 2vw .3vw .3vw;
+  margin-top: 1.7vw;
+  padding-left: 12px;
+  outline: 0 !important;
+  border: none;
+  display: block;
+  width: 88%;
+  opacity: .8;
+  transition: .3s;
+  background: 0 0 !important;
+  caret-color: transparent;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 字体样式 */
+  font-size: 1.0667vw; /* 字体大小 */
+  color: var(--main-font-color); /* 字体颜色 */
+}
+
+form .line-form .line-form-input-enter{
+  padding: 0 2vw .3vw .3vw;
+  margin-top: 1.7vw;
+  padding-left: 12px;
+  outline: 0 !important;
+  border: none;
+  display: block;
+  width: 88%;
+  opacity: .8;
+  transition: .3s;
+  background: 0 0 !important;
+  caret-color: auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 字体样式 */
+  font-size: 1.0667vw; /* 字体大小 */
+  color: var(--main-font-color); /* 字体颜色 */
+}
+
+form .line-form .scale-placeholder-leave{
+  position: absolute;
+  bottom: 0.334vw;
+  opacity: .5;
+  transform: .2s;
+  padding-left: 0.2667vw;
+  transform-origin: left top;
+  user-select: none;
+  pointer-events: none;
+  backface-visibility: hidden;
+  z-index: 1;
+  cursor: text;
+  margin-left: 0.334vw;
+  font: 0.9334vw "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.42857143;
+  transition: all .3s;
+}
+
+form .line-form .scale-placeholder-enter{
+  position: absolute;
+  bottom: 0.334vw;
+  opacity: .5;
+  transform: .2s;
+  padding-left: 0.2667vw;
+  left: 0;
+  bottom: 2vw;
+  user-select: none;
+  pointer-events: none;
+  backface-visibility: hidden;
+  z-index: 1;
+  cursor: text;
+  margin-left: 0.334vw;
+  font: 0.7334vw "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.42857143;
+  color:#e06711;
+  transition: all .3s;
+}
+
+
+form .line-form .line-form-line{
+  margin-left: 0.667vw;
+  height: 0.0667vw;
+  width: 18.667vw;
+  background-color: var(--sign-line);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+form .line-form .line-form1-leave:before{
+  position: absolute;
+  content: "";
+  margin-left: 0.2vw;
+  height: 0.0667vw;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e06711;
+  transition: all 1s;
+}
+
+form .line-form .line-form1-enter:before{
+  position: absolute;
+  content: "";
+  margin-left: 0.2vw;
+  height: 0.0667vw;
+  width: 18.667vw;
+  left: 0;
+  bottom: 0;
+  background-color: #e06711;
+  transition: all 1s;
+}
+
+form .line-form .line-form2-leave:before{
+  position: absolute;
+  content: "";
+  margin-left: 0.2vw;
+  height: 0.0667vw;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #e06711;
+  transition: all 1s;
+}
+
+form .line-form .line-form2-enter:before{
+  position: absolute;
+  content: "";
+  margin-left: 0.2vw;
+  height: 0.0667vw;
+  width: 18.667vw;
+  left: 0;
+  bottom: 0;
+  background-color: #e06711;
+  transition: all 1s;
+}
+
+
+.line-form svg{
+  width: 1.334vw;
+  height: 1.334vw;
+  position: absolute;
+  right: 2vw;
+  bottom: 0.334vw;
+  cursor: pointer;
+}
+
+.line-form .svg-show-password-default{
+  visibility: visible;
+}
+
+.line-form .svg-show-password-change{
+  visibility: hidden;
+}
+
+
+/* 记得登录和找回密码 */
+.line-form3{
+  margin: 1.334vw;
+  width: 18.667vw;
+  height: 1.667vw;
+  margin-bottom: 0.667vw;
+  position: relative;
+  font-size: .9vw;
+}
+
+.line-form3 .check-box{
+  color: var(--book-body-content);
+  float: left;
+}
+
+input[type=checkbox]:checked{
+  background: #e06711;
+  color: #e06711;
+  box-shadow: none;
+}
+
+
+input[type=checkbox]:hover{
+  opacity: .8;
+}
+
+input[type=checkbox]{
+  background: var(--main-bg-color);
+  box-shadow: inset 0 0.1334vw 0.1334vw rgba(0,0,0,.1);
+  border: 0.0667vw solid #b1b1b1;
+  border-radius: 0.2vw;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 0;
+  height: 1vw;
+  padding: 0 !important;
+  width: 1vw;
+  min-width: 1vw;
+  -webkit-appearance: none;
+  vertical-align: -.15vw;
+  position: relative;
+  transition: border-color .3s,background .3s,opacity .2s;
+  margin: 0.0667vw 0 0;
+  box-sizing: border-box;
+}
+
+input[type=checkbox]:checked:before{
+  opacity: 1;
+  transform: translateY(-30%) scale(.7);
+  font-family: FontAwesome;
+  content: "\2714";
+  color: #fff;
+  background-color: var(--main-bg-color);
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  left: -3%;
+  transition: .2s;
+  text-align: center;
+  width: 100%;
+}
+
+.line-form3 .remember-password{
+  margin-left: 0.2vw;
+  color: var(--book-body-content);
+  font:0.84vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0vw 0vw 0.334vw 0.2vw;
+  float: right;
+  cursor: pointer;
+}
+
+.line-form3 .find-password{
+  margin-left: 8.667vw;
+}
+
+.line-form3 .find-password .find-password-a-leave{
+  color: var(--book-body-content);
+  font:0.84vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .2s;
+}
+
+.line-form3 .find-password .find-password-a-enter{
+  color: #e06711;
+  font:0.9334vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .2s;
+}
+
+
+
+/* 登录按钮 */
+.but-sign-in{
+  width: 18.667vw;
+  height: 4.667vw;
+  padding: 0.667vw;
+}
+
+.but-sign-in button{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 4.334vw;
+  margin: 0;
+  padding: 0vw 2vw;
+  border-radius: 3.334vw;
+  width: 17.334vw; 
+  height: 2.667vw;
+  background-color: #2e96fb;
+  color: #fff;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font:0.9334vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+.but-sign-in button:hover{
+  transition: all .3s;
+  background-color: #6fc3fb;
+}
+
+.but-sign-in button .login{
+  margin-bottom: 0.2vw;
+  vertical-align: middle;
+}
+
+.but-sign-in button svg{
+  width: 2.2667vw;
+  height: 0.9334vw;
+  vertical-align: middle;
+}
+
+
+/* 注册 */
+.sign-up-newHeight{
+  width: 22vw;
+  height: 26vw;
+  background-color: var(--main-bg-color);
+  border-radius: 0.5334vw;
+  padding: 0.667vw;
+}
+
+
+/* 注册按钮 */
+.but-sign-up{
+  width: 18.667vw;
+  height: 4.667vw;
+  padding: 1vw;
+}
+
+.but-sign-up button{
+  display: inline-block;
+  font-weight: 400;
+  line-height: 4.334vw;
+  margin: 0;
+  padding: 0vw 2vw;
+  border-radius: 3.334vw;
+  width: 17.334vw; 
+  height: 2.667vw;
+  background-color: #7dce7d;
+  color: #fff;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  font:0.9334vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+.but-sign-up button:hover{
+  transition: all .3s;
+  background-color: #7fe381;
+}
+
+.but-sign-up button .register{
+  margin-bottom: 0.2vw;
+  vertical-align: middle;
+}
+
+.but-sign-up button svg{
+  width: 2.2667vw;
+  height: 0.9334vw;
+  vertical-align: middle;
+}
