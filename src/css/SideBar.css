@@ -1,0 +1,646 @@
+.sidebar{
+  width: 20.73vw;
+}
+
+.sidebar .theme-box{
+  /* height: 38.4vw; */
+  margin-bottom: 1vw;
+  padding: 0.33vw;
+  border-radius: 0.533vw;
+  box-shadow: 0 0 10px rgba(116, 116, 116, 0.08);
+  transition: background 0.5s;
+}
+
+.sidebar .theme-box1{
+  background-color: var(--main-bg-color);
+  width: 20.734vw;
+  height: 34.8vw;
+  overflow: hidden;
+}
+
+/* 侧栏盒子顶部 */
+/* 最新小说 */
+.box-body{
+  padding: 0.334vw;
+  /* box-shadow: 0 0 10px rgba(116, 116, 116, 0.08); */
+  border-radius: 0.534vw;
+  font-size: 0.9334vw;
+}
+
+.box-body .list-inline{
+  margin: 0.134vw 0 ;
+  margin-left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  border-bottom: 0.0667vw solid rgba(50, 50, 50, 0.06);
+}
+
+.box-body .list-inline li{
+  padding-left: 0.3334vw;
+  padding-right: 0.3334vw;
+  vertical-align: middle;
+}
+
+.box-body .list-inline li .a-leave{
+  position: relative;
+  color: #e06711;
+  font-size: 0.9334vw;
+  float: left;
+  margin-left: 0.2667vw;
+  margin-bottom: 0.5334vw;
+  transition: all .3s;
+}
+
+.box-body .list-inline li .a-enter{
+  position: relative;
+  color: #F98C42;
+  font-size: 1vw;
+  float: left;
+  margin-left: 0.2667vw;
+  margin-bottom: 0.5334vw;
+  transition: all .3s;
+}
+
+.box-body .list-inline li a:before{
+  content: '';
+  position: absolute;
+  background-color: #e06711;
+  left: 0.9vw;
+  bottom: -0.2vw;
+  height: 0.15vw;
+  width: 2vw;
+  transform: scaleX(1);  /* 初始状态 */
+  transform-origin: center;  /* 以中心为基点 */
+  border-radius: 0.66vw 0.66vw 0.66vw 0.66vw;
+  transition: all 0.5s ;
+}
+
+.box-body .list-inline li a.mouse-enter:before{
+  transform: scaleX(2);
+}
+
+
+/* 侧边栏盒子信息 */
+.tab-content .tab-pane{
+  display: block;
+}
+
+.tab-pane .posts-mini{
+  width: 100% !important;
+  padding: 0.334vw;
+  display: flex;
+  height: 4.4vw;
+  justify-content: space-between;
+  margin-bottom: 0.334vw;
+}
+
+/* 侧栏图片 */
+.tab-pane .tab-image-container{
+  margin-right: 0.2667vw;
+}
+
+.tab-pane .tab-image-container .tab-image{
+  width: 100%;
+  height: 100%;
+  width: 6.4vw;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.534vw;
+}
+
+.tab-image .img-leave{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.534vw;
+  vertical-align: middle;
+  border: 0;
+  transition: all .3s;
+}
+
+.tab-image .img-enter{
+  width: 103%;
+  height: 103%;
+  object-fit: cover;
+  border-radius: 0.534vw;
+  vertical-align: middle;
+  border: 0;
+  transition: all .3s;
+}
+
+/* 侧栏其他信息 */
+.tab-other{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: auto;
+  overflow: hidden;
+}
+
+.tab-other .item-heading{
+  padding: 0.2vw;
+  margin: 0;
+  font-size: 0.9334vw;
+  height: 2.8em;
+  line-height: 1.4em;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+  position: relative;
+  text-overflow: ellipsis;		
+}
+
+.tab-other .item-heading .item-heading-title-leave{
+  color: var(--main-font-color);
+  font: 0.9334vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .4s;
+}
+
+.tab-other .item-heading .item-heading-title-enter{
+  color: #E56711;
+  font: 0.9667vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .4s;
+}
+
+
+
+.heading-number{
+  min-width: 1.2vw;
+  font-size: .8em;
+  padding: 0 .2em;
+  vertical-align: .1em;
+  margin-right: 0.2vw;
+  display: inline-block;
+  border-radius: 0.2667vw;
+  border: 0.0667vw solid transparent;
+  text-align: center;
+  font-weight: 400;
+  box-shadow: none;
+  white-space: normal;
+}
+
+/* 侧栏数字标号根据index索引选择不同色 */
+.bg-color-1{
+  color: #FF5B95;
+  background: #FFEEF1;
+}
+.bg-color-2{
+  color: #FF7264;
+  background: #FFF0E6;
+}
+.bg-color-3{
+  color: #EB7BE1;
+  background: #FBECFE;
+}
+.bg-color-4{
+  color: #7199F7;
+  background: #E9F4FE;
+}
+.bg-color-5{
+  color: #95A92A;
+  background: #E7F8E9;
+}
+.bg-color-6{
+  color: #8F8888;
+  background: #F3F3F3;
+}
+.bg-color-7{
+  color: #8F8888;
+  background: #F3F3F3;
+}
+.bg-color-8{
+  color: #8F8888;
+  background: #F3F3F3;
+}
+
+
+
+
+
+/* 作者评论等信息 */
+.item-meta{
+  display: flex;
+  justify-content: space-between;
+  height: 1.4vw;
+  /* overflow: hidden; */
+  align-items: center;
+  margin-top: 0.2vw;
+}
+
+.item-heading .userAndTime{
+  margin-right: 0.5334vw;
+  font-size: 0.8667vw;
+}
+
+.userAndTime .avatar-mini{
+  display: inline-block;
+  width: 1.33vw;
+  height: 1.33vw;
+}
+
+.userAndTime .avatar-mini .avatar-img-leave{
+  border-radius: 6.667vw;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  filter: blur(0);
+  transition: all .5s;
+}
+
+.userAndTime .avatar-mini .avatar-img-enter{
+  border-radius: 6.667vw;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  filter: blur(0);
+  transform: rotate(-180deg);
+  transition: all .5s;
+}
+
+.userAndTime .meta-time{
+  font-size: 0.866vw;
+  color: var(--book-body-nameAndTime);
+  margin-left: 0.4vw;
+}
+
+
+/* 右边评论浏览量等 */
+.meta-right{
+  padding: 0.667vw;
+  align-items: center;
+  margin-top: 0.333vw; 
+}
+
+.meta-right a{
+  margin-left: 0.667vw;
+  display: inline-flex; /* 确保内联元素水平居中 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 0.4vw;
+}
+
+.meta-right a svg{
+  width: 0.7vw;
+  height: 0.7vw;
+  vertical-align: middle; /* 垂直居中对齐 */
+}
+
+.meta-right span{
+  font-size: 0.866vw;
+  color: var(--book-body-nameAndTime);
+  font: 0.8vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* 热门小说 */
+.theme-title .hot-novel-ul{
+  margin: 0.1334vw;
+  margin-left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.theme-title .hot-novel-ul li{
+  padding-left: 0.334vw;
+  padding-right: 0.334vw;
+  vertical-align: middle;
+}
+
+.theme-box .hot-novel-ul li .hot-a-leave{
+  position: relative;
+  color: var(--main-font-color);
+  font-size: 0.9334vw;
+  float: left;
+  padding-left: 0.6667vw;
+  margin-bottom: 0.5334vw;
+  transition: all .3s;
+}
+
+.theme-box .hot-novel-ul li .hot-a-enter{
+  position: relative;
+  color: #F98C42;
+  font-size: 0.9334vw;
+  float: left;
+  padding-left: 0.6667vw;
+  margin-bottom: 0.5334vw;
+  transition: all .3s;
+}
+
+.theme-box .hot-novel-ul li a:before{
+  content: '';
+  position: absolute;
+  background-color: #e06711;
+  left: -0.2vw;
+  bottom: 0.1vw;
+  height: 1.2vw;
+  width: 0.25vw;
+  transform: scaleX(1);  /* 初始状态 */
+  transform-origin: center;  /* 以中心为基点 */
+  border-radius: 0.66vw 0.66vw 0.66vw 0.66vw;
+  transition: all 0.5s ;
+}
+
+/* 热门小说列表 */
+.hot-novel-lists{
+  background-color: var(--main-bg-color);
+  height: 22vw;
+  margin-bottom: 1.3334vw;
+  overflow: hidden;
+  width: 20.734vw;
+}
+
+.hot-novel-lists .hot-novel-li-container{
+  height: 2.467vw;
+  padding: 0.2vw;
+  display: flex;
+}
+
+.hot-novel-li-container .hot-novel-li{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  flex: auto;
+}
+
+.hot-novel-li .hot-novel-h2{
+  margin: 0;
+  font-size: 0.934vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hot-novel-li .hot-novel-h2 .hot-novel-a-leave{
+  color: var(--main-font-color);
+  font: 0.934vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+.hot-novel-li .hot-novel-h2 .hot-novel-a-enter{
+  color: #E56711;
+  font: 1vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all .3s;
+}
+
+
+
+
+/* 小说标签 */
+.tag-container{
+  padding: 0.667vw;
+  width: 20.734vw;
+  height: 9.467vw;
+  background-color:var(--main-bg-color);
+  transition: all .3s;
+}
+
+.tag-container .tag{
+  font: 0.867vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0.334vw;
+  margin-right: 0.0667vw;
+  margin-left: 0.334vw;
+  padding: .15em .4em;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.2667vw;
+  border: 0.0667vw solid transparent;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
+  color: #888;
+  background-color: rgba(136, 136, 136, .1);
+  transition: all .3s;
+}
+
+
+
+/* tag颜色 */
+.tag-container .tag1{
+  color: #ff6f06;
+  background-color: rgba(255, 111, 6, 0.1);
+}
+
+.tag-container .tag2{
+  color: #18a52a;
+  background-color: rgba(18, 185, 40, .1);
+}
+
+.tag-container .tag3{
+  color: #e434e1;
+  background-color: rgba(213, 72, 245, 0.1);
+}
+
+.tag-container .tag4{
+  color: #ff5473;
+  background-color: rgba(255, 84, 115, .1);
+}
+
+.tag-container .tag5{
+  color: #5c7cff;
+  background-color: rgba(77, 130, 249, .1);
+}
+
+.tag-container .tag6{
+  color: #c58516;
+  background-color: rgba(179, 103, 8, 0.1);
+}
+
+.tag-container .tag7{
+  color: #6a933e;
+  background-color: rgba(72, 135, 24, .1);
+}
+
+.tag-container .tag8{
+  color: #8e4aff;
+  background-color: rgba(154, 72, 245, 0.1);
+}
+
+.tag-container .tag9{
+  color: #d6064c;
+  background-color: rgba(194, 41, 46, 0.1);
+}
+
+.tag-container .tag10{
+  color: #2997f7;
+  background-color: rgba(41, 151, 247, .1);
+}
+
+
+.tag-container .tag11{
+  color: #ff6f06;
+  background-color: rgba(255, 111, 6, 0.1);
+}
+
+.tag-container .tag12{
+  color: #18a52a;
+  background-color: rgba(18, 185, 40, .1);
+}
+
+.tag-container .tag13{
+  color: #e434e1;
+  background-color: rgba(213, 72, 245, 0.1);
+}
+
+.tag-container .tag14{
+  color: #ff5473;
+  background-color: rgba(255, 84, 115, .1);
+}
+
+.tag-container .tag15{
+  color: #5c7cff;
+  background-color: rgba(77, 130, 249, .1);
+}
+
+.tag-container .tag16{
+  color: #c58516;
+  background-color: rgba(179, 103, 8, 0.1);
+}
+
+.tag-container .tag17{
+  color: #6a933e;
+  background-color: rgba(72, 135, 24, .1);
+}
+
+.tag-container .tag18{
+  color: #8e4aff;
+  background-color: rgba(154, 72, 245, 0.1);
+}
+
+.tag-container .tag19{
+  color: #d6064c;
+  background-color: rgba(194, 41, 46, 0.1);
+}
+
+.tag-container .tag20{
+  color: #2997f7;
+  background-color: rgba(41, 151, 247, .1);
+}
+
+/* Hover 样式 */
+.tag-container .tag:hover{
+  font: 0.867vw "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0.334vw;
+  margin-right: 0.0667vw;
+  margin-left: 0.334vw;
+  padding: .15em .4em;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.2667vw;
+  border: 0.0667vw solid transparent;
+  vertical-align: middle;
+  text-align: center;
+  float: left;
+  color: #888;
+  background-color: rgba(136, 136, 136, .2);
+  transition: all .3s;
+}
+
+
+.tag-container .tag1:hover {
+  color: #ff6f06;
+  background-color: rgba(255, 111, 6, 0.2);
+}
+
+.tag-container .tag2:hover {
+  color: #18a52a;
+  background-color: rgba(18, 185, 40, .2);
+}
+
+.tag-container .tag3:hover {
+  color: #e434e1;
+  background-color: rgba(213, 72, 245, 0.2);
+}
+
+.tag-container .tag4:hover {
+  color: #ff5473;
+  background-color: rgba(255, 84, 115, .2);
+}
+
+.tag-container .tag5:hover {
+  color: #5c7cff;
+  background-color: rgba(77, 130, 249, .2);
+}
+
+.tag-container .tag6:hover {
+  color: #c58516;
+  background-color: rgba(179, 103, 8, 0.2);
+}
+
+.tag-container .tag7:hover {
+  color: #6a933e;
+  background-color: rgba(72, 135, 24, .2);
+}
+
+.tag-container .tag8:hover {
+  color: #8e4aff;
+  background-color: rgba(154, 72, 245, 0.2);
+}
+
+.tag-container .tag9:hover {
+  color: #d6064c;
+  background-color: rgba(194, 41, 46, 0.2);
+}
+
+.tag-container .tag10:hover {
+  color: #2997f7;
+  background-color: rgba(41, 151, 247, .2);
+}
+
+.tag-container .tag11:hover {
+  color: #ff6f06;
+  background-color: rgba(255, 111, 6, 0.2);
+}
+
+.tag-container .tag12:hover {
+  color: #18a52a;
+  background-color: rgba(18, 185, 40, .2);
+}
+
+.tag-container .tag13:hover {
+  color: #e434e1;
+  background-color: rgba(213, 72, 245, 0.2);
+}
+
+.tag-container .tag14:hover {
+  color: #ff5473;
+  background-color: rgba(255, 84, 115, .2);
+}
+
+.tag-container .tag15:hover {
+  color: #5c7cff;
+  background-color: rgba(77, 130, 249, .2);
+}
+
+.tag-container .tag16:hover {
+  color: #c58516;
+  background-color: rgba(179, 103, 8, 0.2);
+}
+
+.tag-container .tag17:hover {
+  color: #6a933e;
+  background-color: rgba(72, 135, 24, .2);
+}
+
+.tag-container .tag18:hover {
+  color: #8e4aff;
+  background-color: rgba(154, 72, 245, 0.2);
+}
+
+.tag-container .tag19:hover {
+  color: #d6064c;
+  background-color: rgba(194, 41, 46, 0.2);
+}
+
+.tag-container .tag20:hover {
+  color: #2997f7;
+  background-color: rgba(41, 151, 247, .2);
+}
